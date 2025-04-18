@@ -10,10 +10,25 @@
 
 import csv
 import argparse
-import kagglehub
+
 
 ...
-with open('../data/books.csv') as f:
-    reader = csv.reader(f)
-    for book_row in reader:
+
+def searchByGenre(findGenre):
+    with open('../data/tmdb_5000_movies.csv') as f:
+        reader = csv.reader(f)
+        for movie_row in reader:
+            genreList =movie_row[1]
+            if findGenre.lower() in genreList.lower():
+                print(movie_row[6])
+
+
+def main():
+    parser = argparse.ArgumentParser(description='Search dataset by                               genres.')
+    parser.add_argument('genre',help='Genre your searching for')
+    parsed_arguments = parser.parse_args()
+    searchByGenre(parsed_arguments.genre)
+
+if __name__ == '__main__':
+    main()
 
