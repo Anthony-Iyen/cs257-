@@ -24,7 +24,7 @@ def searchByGenre(findGenre):
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Search dataset by                               genres.')
+    parser = argparse.ArgumentParser(description='Search dataset by genres.')
     parser.add_argument('genre',help='Genre your searching for')
     parsed_arguments = parser.parse_args()
     searchByGenre(parsed_arguments.genre)
