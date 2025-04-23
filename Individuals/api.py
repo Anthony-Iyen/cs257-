@@ -1,9 +1,11 @@
 '''
     Api.py
-    Anthony Iyengunmwena, 23 April 2025
+    Anthony Iyengunmwena,Jeff Ondich 23 April 2025
     Last updated 23 April 2025
 
     A flask and API endpoints assignment modifing my projects dataset.
+
+    Note: some code reused from teacher example.
 '''
 
 import sys
